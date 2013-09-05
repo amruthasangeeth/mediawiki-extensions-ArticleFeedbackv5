@@ -349,6 +349,7 @@ class ArticleFeedbackv5Utils {
 	 * @return bool Will return boolean false if valid or true if flagged
 	 */
 	public static function validateSpamBlacklist( $value, $pageId ) {
+		return false; // https://bugzilla.wikimedia.org/show_bug.cgi?id=53821
 		// Check SpamBlacklist, if installed
 		if ( function_exists( 'wfSpamBlacklistObject' ) ) {
 			$spam = wfSpamBlacklistObject();
